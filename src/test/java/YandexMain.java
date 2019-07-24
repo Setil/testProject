@@ -9,6 +9,7 @@ public class YandexMain {
     private SelenideElement searchPopupFirstResult = $(".popup__content li:nth-child(1)");
     private SelenideElement resultMainText = searchPopupFirstResult.$(".suggest2-item__text");
     private SelenideElement resultFactText = searchPopupFirstResult.$(".suggest2-item__fact");
+    private SelenideElement imagesTab = $(".home-tabs .home-link[data-id='images']");
 
     public YandexMain setSearchField(String text){
         searchField
@@ -31,5 +32,10 @@ public class YandexMain {
         } catch (ElementNotFound e) {
             return "";
         }
+    }
+
+    public YandexMain verifyImagesTabVisible(){
+        imagesTab.shouldBe(Condition.visible.because("Вкладка 'Картинки' не отобразилась"));
+        return this;
     }
 }

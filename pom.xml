@@ -71,6 +71,11 @@
             <artifactId>log4j-jul</artifactId>
             <version>${log4j2.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+        </dependency>
         <!--Selenium-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -97,11 +102,6 @@
         <!--Allure-->
         <dependency>
             <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
             <version>${allure.version}</version>
             <scope>test</scope>
@@ -112,11 +112,10 @@
             <version>${allure.version}</version>
             <scope>test</scope>
         </dependency>
-        <!--Получение скриншотов-->
         <dependency>
-            <groupId>ru.yandex.qatools.ashot</groupId>
-            <artifactId>ashot</artifactId>
-            <version>1.5.4</version>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180130</version>
         </dependency>
     </dependencies>
     <build>
